@@ -1,6 +1,6 @@
 {
-  "name": "unit-test-generator-for-cpp",
-  "displayName": "unit-test-generator-for-cpp",
+  "name": "unit-test-generator-extension",
+  "displayName": "unit-test-generator-extension",
   "description": "Generate unit tests for C++ code using OpenAI's GPT-3.",
   "version": "0.0.1",
   "publisher": "publisher",
@@ -11,23 +11,23 @@
   "contributes": {
     "commands": [
       {
-        "command": "unit-test-generator-for-cpp.createUnitTest",
+        "command": "unit-test-generator-extension.createUnitTest",
         "title": "Generate Unit Test"
       },
       {
-        "command": "unit-test-generator-for-cpp.createIntegrationTest",
+        "command": "unit-test-generator-extension.createIntegrationTest",
         "title": "Generate Integration Test"
       }
     ],
     "menus": {
       "editor/context": [
         {
-          "command": "unit-test-generator-for-cpp.createUnitTest",
+          "command": "unit-test-generator-extension.createUnitTest",
           "when": "editorTextFocus",
           "group": "navigation"
         },
         {
-          "command": "unit-test-generator-for-cpp.createIntegrationTest",
+          "command": "unit-test-generator-extension.createIntegrationTest",
           "when": "editorTextFocus",
           "group": "navigation"
         }

@@ -1,6 +1,6 @@
-# unit-test-generator-for-cpp README
+# unit-test-generator-extension README
 
-This is the README for your extension "unit-test-generator-for-cpp". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "unit-test-generator-extension". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 

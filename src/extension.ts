@@ -45,7 +45,7 @@ export async function activate(context: vscode.ExtensionContext) {
   const name = await getUserInfo();
   greetUser(name.name);
 
-  console.log('Extension "unit-test-generator-for-cpp" is now active!');
+  console.log('Extension "unit-test-generator-extension" is now active!');
 
   const editor = vscode.window.activeTextEditor;
   if (!editor) {
@@ -58,7 +58,7 @@ export async function activate(context: vscode.ExtensionContext) {
     return vscode.window.showErrorMessage('Select code to create a unit test for.');
   }
 
-  let disposable = vscode.commands.registerCommand('unit-test-generator-for-cpp.createUnitTest', async () => {
+  let disposable = vscode.commands.registerCommand('unit-test-generator-extension.createUnitTest', async () => {
     let editorDocumentFileName = editor.document.fileName;
     const res = await generateUnitTestFromCode(selectedText, editorDocumentFileName);
     if (!res.success) {
@@ -78,7 +78,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
 
 
-  let disposableIntegrationTest = vscode.commands.registerCommand('unit-test-generator-for-cpp.createIntegrationTest', async () => {
+  let disposableIntegrationTest = vscode.commands.registerCommand('unit-test-generator-extension.createIntegrationTest', async () => {
     const workspaceFolders = vscode.workspace.workspaceFolders;
     if (!workspaceFolders) {
       return vscode.window.showErrorMessage('No workspace folder open');
@@ -107,5 +107,5 @@ export async function activate(context: vscode.ExtensionContext) {
 exports.activate = activate;
 
 export function deactivate() {
-  console.log('Extension "unit-test-generator-for-cpp" is now deactivated!');
+  console.log('Extension "unit-test-generator-extension" is now deactivated!');
 }
